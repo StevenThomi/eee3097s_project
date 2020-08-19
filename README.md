@@ -11,7 +11,8 @@ The temperature and humidity mapping can be used in the following areas:
 - identify potential desert locust breeding grounds through analysis of relative humidity
 
 ## Tools:
-*“A man is only as good as his tools.”  ― Emmert Wolf*
+>“A man is only as good as his tools.”  
+*― Emmert Wolf*
 
 The following tools are at my disposal:
 - 1x DHT22 2 Click Temperature & Humidity Sensor Add On Board with CM2322
