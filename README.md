@@ -1,6 +1,6 @@
 # eee3097s_project
 
-## Electrical and Computer Engineering Practical Design and Implementation course.
+## Electrical and Computer Engineering Practical Design and Implementation
 
 ## Aim:
 Using a small single-board computer, develop an IoT application to generate a temperature and humidity mapping of a wide geometrical location.
