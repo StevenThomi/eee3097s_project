@@ -7,7 +7,7 @@ Using a small single-board computer, develop an IoT application to generate a te
 
 ## Use Case:
 The temperature and humidity mapping can be used in the following areas:
-- identify location of forest fires, as well as direction of travel of the flames
+- identify location of forest fires, as well as velocity of travel of the flame
 - identify potential desert locust breeding grounds through analysis of relative humidity
 
 ## Tools:
