@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Steven Thomi <THMSTE021@myuct.ac.za>
+* Steven Thomi <stevenkthomi@gmail.com>
 
 Contributors
 ------------
