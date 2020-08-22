@@ -1,5 +1,5 @@
-"""Top-level package for ECE Project."""
+"""Top-level package for EEE3097S Project."""
 
 __author__ = """Steve Thomi"""
-__email__ = 'steveth437@gmail.com'
+__email__ = 'stevenkthomi@gmail.com'
 __version__ = '0.1.0'
