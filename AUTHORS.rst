@@ -5,9 +5,9 @@ Credits
 Development Lead
 ----------------
 
-* Steve Thomi <steveth437@gmail.com>
+* Steven Thomi <THMSTE021@myuct.ac.za>
 
 Contributors
 ------------
 
-None yet. Why not be the first?
+Why not be the first?
