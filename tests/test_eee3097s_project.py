@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-"""Tests for `ece_design_project` package."""
+"""Tests for `eee3097s_project` package."""
 
 import pytest
 
 from click.testing import CliRunner
 
-from ece_design_project import ece_design_project
-from ece_design_project import cli
+from eee3097s_project import eee3097s_project
+from eee3097s_project import cli
 
 
 @pytest.fixture
@@ -31,7 +31,7 @@ def test_command_line_interface():
     runner = CliRunner()
     result = runner.invoke(cli.main)
     assert result.exit_code == 0
-    assert 'ece_design_project.cli.main' in result.output
+    assert 'eee3097s_project.cli.main' in result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output
