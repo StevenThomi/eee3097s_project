@@ -1,1 +1,1 @@
-"""Unit test package for ece_design_project."""
+"""Unit test package for eee3097s_project."""
