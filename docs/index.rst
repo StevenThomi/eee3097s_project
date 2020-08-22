@@ -1,4 +1,4 @@
-Welcome to ECE Project's documentation!
+Welcome to EEE3097S Project's documentation!
 ======================================
 
 .. toctree::
