@@ -1,1 +1,3 @@
-Standard visualization of the design of eee3097s_project
+Standard visualization of the design of eee3097s_project's API using both:
+- UML sequence diagrams; and,
+- UML class diagrams.
