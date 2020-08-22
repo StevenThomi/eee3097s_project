@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use ECE Project in a project::
+To use EEE3097S Project in a project::
 
-    import ece_design_project
+    import eee3097s_project
