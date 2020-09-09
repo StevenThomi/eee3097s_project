@@ -28,11 +28,11 @@ class dh22Sensor(Sensor):
 # extract meaning from simulated measurands through alerts - defined in a
 # table of alerts
     def getAlert(self, temperature, humidity):
-        if(getTemperature() > 50 and getHumidity() < 30):
+        if(temperature > 50 and humidity < 30):
             return Alert(4)
-        elif(getTemperature() > 50):
+        elif(temperature > 50):
             return Alert(2)
-        elif(getHumidity() < 30):
+        elif(humidity < 30):
             return Alert(3)
         else:
             return Alert(1)
