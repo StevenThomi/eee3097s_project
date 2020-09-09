@@ -18,7 +18,7 @@ class FireMarshall(User):
 # select a station in the lookup table
     def setStation(self, station):
         if(5 < station > 1):
-            self.__station = FireStation(forest)
+            self.__station = FireStation(station)
         else:
             print("Error... revert to default")
             self.__station = FireStation(1)
@@ -27,5 +27,5 @@ class FireMarshall(User):
         return self.__station
 
 # display fire marshall attributes
-    def printMarshall(self):
+    def printFireMarshall(self):
         print(self.__str__() + ", Station: " + str(self.__station))
