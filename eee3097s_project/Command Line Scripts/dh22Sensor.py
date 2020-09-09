@@ -1,6 +1,7 @@
-# import Enum class and random number libraries
+# import Enum class and random number libraries, and Sensor class
 from enum import Enum, unique
 from random import random
+from Sensor import Sensor
 
 @unique
 class Alert(Enum):
