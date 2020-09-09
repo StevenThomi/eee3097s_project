@@ -1,4 +1,5 @@
-# import Enum class library
+# import Enum class library, and User class
+from User import User
 from enum import Enum, unique
 
 @unique
