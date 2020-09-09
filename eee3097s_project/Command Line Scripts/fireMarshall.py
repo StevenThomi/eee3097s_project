@@ -1,6 +1,6 @@
 # import Enum class library, and User class
-from User import User
 from enum import Enum, unique
+from User import User
 
 @unique
 class FireStation(Enum):
