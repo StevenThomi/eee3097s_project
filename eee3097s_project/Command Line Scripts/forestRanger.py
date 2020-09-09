@@ -1,5 +1,6 @@
-# import Enum class library
+# import Enum class library, and User class
 from enum import Enum, unique
+from User import User
 
 @unique
 class Forest(Enum):
