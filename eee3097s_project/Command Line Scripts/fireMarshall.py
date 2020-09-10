@@ -19,7 +19,7 @@ class FireMarshall(User):
 # select a station in the lookup table
     def setStation(self, station):
         if(station >= 1 or station <= 5):
-            self.__station = FireStation(station)
+            self.__station = FireStation(int(station))
         else:
             print("Error... revert to default")
             self.__station = FireStation(1)
