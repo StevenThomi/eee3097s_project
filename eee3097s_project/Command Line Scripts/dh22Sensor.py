@@ -11,29 +11,32 @@ class Alert(Enum):
     HIGH_TEMPARATURE_HUMIDITY = 4
 
 # simulate the operations of a dh22sensor
-# temperature and humidity are not inbuilt into the sensor
-# but rather a consequence of their environment
-# these variables; therefore, cannot be inbuilt into the sensor itself
+# temperature and humidity are initialized to 0, updated
+# in every fetch
 class dh22Sensor(Sensor):
     def __init__(self):
         super().__init__()
+        self.__temperature = 0
+        self.__humidity = 0
 
 # simulate the temperature in a 0°C to 70°C range - using random numbers
     def getTemperature(self):
-        return (random() * 70)
-
+        self.__temperature = random() * 70
+        return self.__temperature
+    
 # simulate the humidity in a 0% to 100% range - using random numbers
     def getHumidity(self):
-        return (random() * 100)
-
+        self.__humidity = random() * 100
+        return self.__humidity
+    
 # extract meaning from simulated measurands through alerts - defined in a
 # table of alerts
-    def getAlert(self, temperature, humidity):
-        if(temperature > 50 and humidity < 30):
+    def getAlert(self):
+        if(self.__temperature > 50 and self.__humidity < 30):
             return Alert(4)
-        elif(temperature > 50):
+        elif(self.__temperature > 50):
             return Alert(2)
-        elif(humidity < 30):
+        elif(self.__humidity < 30):
             return Alert(3)
         else:
             return Alert(1)
@@ -42,8 +45,7 @@ class dh22Sensor(Sensor):
     def printSensor(self):
         temperature = getTemperature()
         humidity = getHumidity()
-        alert = getAlert(temperature, humidity)
 
         print("DH22 Sensor: " + self.__str__() + "\tTemperature: " + \
                 str(temperature) + "°C\tHumidity: " + str(humidity) + \
-                "%\tAlert: " + str(alert))
+                "%\tAlert: " + str(getAlert()))
