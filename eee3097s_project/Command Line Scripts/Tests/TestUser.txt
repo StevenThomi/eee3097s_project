@@ -4,7 +4,7 @@ The following fire marshall has been registered:
 UserID: 877, Name: , Phone: 0, Password: 0, Login Status: True, Station: FireStation.SOUTH
 
 Let's change some of their attributes;
-First of all, lets change their name. 
+First of all, let's change their name. 
 Input a cool name: Steve Thomi
 
 A password of '0' doesn't sound so strong. 
