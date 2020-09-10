@@ -45,7 +45,9 @@ class dh22Sensor(Sensor):
     def printSensor(self):
         temperature = getTemperature()
         humidity = getHumidity()
-
+        # writeToDatabase()
+        # write the fields to the linked database
+        
         print("DH22 Sensor: " + self.__str__() + "\tTemperature: " + \
                 str(temperature) + "°C\tHumidity: " + str(humidity) + \
                 "%\tAlert: " + str(getAlert()))
