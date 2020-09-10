@@ -42,9 +42,9 @@ def main():
     print("\nSensor 3: ", end = "")
     sensor3.printSensor()
 
-    print("Straight out the box. A configuration should get them up and running.")
+    print("\nStraight out the box. A configuration should get them up and running.")
 
-    print("\nLets initialize the sensors with some unique sensor IDs")
+    print("\nLet's initialize the sensors with some unique sensor IDs")
 
     newSensorID1 = input("Sensor 1 sensor ID: ")
     newSensorID2 = input("Sensor 2 sensor ID: ")
@@ -64,9 +64,9 @@ def main():
     print("\nAlmost done. Where would you like to situate them?")
     print("\nAbide by format: 00° 00\' 00.0\" S 00° 00\' 00.0\" E")
 
-    newLocation1 = input("Input sensor 1's location (lattitude, longitude)").strip()
-    newLocation2 = input("Input sensor 2's location (lattitude, longitude)").strip()
-    newLocation3 = input("Input sensor 3's location (lattitude, longitude)").strip()
+    newLocation1 = input("Input sensor 1's location (lattitude, longitude): ").strip()
+    newLocation2 = input("Input sensor 2's location (lattitude, longitude): ").strip()
+    newLocation3 = input("Input sensor 3's location (lattitude, longitude): ").strip()
 
     sensor1.setLocation(newLocation1)
     sensor2.setLocation(newLocation2)
