@@ -1,0 +1,31 @@
+python TestUser.py
+
+The following fire marshall has been registered: 
+UserID: 877, Name: , Phone: 0, Password: 0, Login Status: True, Station: FireStation.SOUTH
+
+Let's change some of their attributes;
+First of all, lets change their name. 
+Input a cool name: Steve Thomi
+
+A password of '0' doesn't sound so strong. 
+Input a strong password: 1234
+
+What about a phone number? It's always good to be accessible. 
+Input a phone number: 0701071594
+
+Looking good! Their account is now starting to take shape: 
+UserID: 877, Name: Steve Thomi, Phone: 0701071594, Password: 1234, Login Status: True, Station: FireStation.SOUTH
+
+One last thing, what about a fancier user ID 877 sounds a little bit bulky. 
+Would you like to change it (Y/N)?Y
+Processing changes...
+
+Jackpot! Hit my lucky number of 150
+
+Here are the changes: 
+UserID: 150, Name: Steve Thomi, Phone: 0701071594, Password: 1234, Login Status: True, Station: FireStation.SOUTH
+
+Logging out session... 
+
+Finally: 
+UserID: 150, Name: Steve Thomi, Phone: 0701071594, Password: 1234, Login Status: False, Station: FireStation.SOUTH
