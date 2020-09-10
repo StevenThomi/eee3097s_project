@@ -7,8 +7,8 @@ from Sensor import Sensor
 class Alert(Enum):
     NO_ALERT = 1
     HIGH_TEMPARATURE = 2
-    HIGH_HUMIDITY = 3
-    HIGH_TEMPARATURE_HUMIDITY = 4
+    LOW_HUMIDITY = 3
+    HIGH_TEMPARATURE_LOW_HUMIDITY = 4
 
 # simulate the operations of a dh22sensor
 # temperature and humidity are initialized to 0, updated
