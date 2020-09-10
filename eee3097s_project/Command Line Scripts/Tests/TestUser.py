@@ -1,6 +1,4 @@
 from FireMarshall import FireMarshall
-# from ForestRanger import ForestRanger
-# from dh22sensor import dh22sensor
 
 def main():
     fireMarshall = FireMarshall(2)
