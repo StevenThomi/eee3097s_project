@@ -8,7 +8,7 @@ def main():
 
     print("\nLet's change some of their attributes;")
 
-    print("First of all, lets change their name. ")
+    print("First of all, let's change their name. ")
     newName = input("Input a cool name: ")
     fireMarshall.setName(newName)
 
