@@ -1,0 +1,48 @@
+python TestSensor.py
+
+The following sensors have been registered: 
+Sensor 1: DH22 Sensor: Sensor ID: 0, Location: 33° 48' 58" S 18° 28' 22" E	Temperature: 0°C	Humidity: 0%	Alert: Alert.NO_ALERT
+
+Sensor 2: DH22 Sensor: Sensor ID: 0, Location: 33° 48' 58" S 18° 28' 22" E	Temperature: 0°C	Humidity: 0%	Alert: Alert.NO_ALERT
+
+Sensor 3: DH22 Sensor: Sensor ID: 0, Location: 33° 48' 58" S 18° 28' 22" E	Temperature: 0°C	Humidity: 0%	Alert: Alert.NO_ALERT
+Straight out the box. A configuration should get them up and running.
+
+Lets initialize the sensors with some unique sensor IDs
+Sensor 1 sensor ID: 123
+Sensor 2 sensor ID: 456
+Sensor 3 sensor ID: 789
+
+Almost done. Where would you like to situate them?
+
+Abide by format: 00° 00' 00.0" S 00° 00' 00.0" E
+Input sensor 1's location (lattitude, longitude)33° 48' 64.8" S 18° 28' 26.8" E
+Input sensor 2's location (lattitude, longitude)33° 48' 65.0" S 18° 28' 27.0" E
+Input sensor 3's location (lattitude, longitude)33° 48' 65.2" S 18° 28' 27.2" E
+
+After 5 minutes, their states are checked once more: 
+
+Sensor 1: Temperature =  48.64244006992365
+Sensor 1: Humidity =  54.36808688721858
+Sensor 1: Alert = Alert.NO_ALERT
+
+Sensor 2: Temperature =  39.3647324287242
+Sensor 2: Humidity =  87.04682684901542
+Sensor 2: Alert = Alert.NO_ALERT
+
+Sensor 3: Temperature =  8.892943990440028
+Sensor 3: Humidity =  90.05593358198084
+Sensor 3: Alert = Alert.NO_ALERT
+
+
+The distance between sensor 1 and sensor 2 is:  8.03132500342546 m
+
+The distance between sensor 2 and sensor 3 is:  8.031322873060965 m
+
+The distance between sensor 1 and sensor 3 is:  16.06264787648494 m
+
+sensor 1 and sensor 2 are innefectively spaced
+
+sensor 2 and sensor 3 are innefectively spaced
+
+The spacing between sensor 1 and sensor 3 is exquisite! Good job.
