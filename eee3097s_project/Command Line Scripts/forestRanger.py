@@ -18,8 +18,8 @@ class ForestRanger(User):
 
 # select a forest in the lookup table
     def setForest(self, forest):
-        if(5 < forest > 1):
-            self.__forest = Forest(forest)
+        if(forest >= 1 and forest <= 5):
+            self.__forest = Forest(int(forest))
         else:
             print("Error... revert to default")
             self.__forest = Forest(1)
