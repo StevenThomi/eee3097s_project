@@ -1,1 +1,5 @@
 conducted using pytest
+
+To see the stub tests conducted over development visit: 
+
+https://github.com/StevenThomi/eee3097s_project/tree/master/eee3097s_project/Command%20Line%20Scripts/Tests
