@@ -25,7 +25,7 @@ class ForestRanger(User):
             self.__forest = Forest(1)
 
     def getForest(self):
-        return self.__forest
+        return str(self.__forest)
 
 # display forest ranger attributes
     def printRanger(self):
