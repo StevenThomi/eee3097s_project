@@ -25,7 +25,7 @@ class FireMarshall(User):
             self.__station = FireStation(1)
 
     def getStation(self):
-        return self.__station
+        return str(self.__station)
 
 # display fire marshall attributes
     def printFireMarshall(self):
