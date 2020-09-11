@@ -6,3 +6,4 @@
 |  10th September 2020  | database - sensor relationship and multiplicities defined    |
 |  10th September 2020  | database - memory relationship and multiplicities defined    |
 |  10th September 2020  | dh22sensor, memory, RAM, EEPROM fields updated               |
+|  11th September 2020  | Timer class deleted - script imported library will suffice   |
