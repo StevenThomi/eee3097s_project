@@ -77,7 +77,7 @@ The following alterations were made to the structure of the table:
 |  2              | Steve Thomi            |0715789786              |5678                    |Logged Out              |FireStation.EAST        |
 
 ### Sensor Table
-| SENSORID        | LOCATION                      | TEMPERATURE      | HUMIDITY         | ALERT                  |
-| :--------------:| :----------------------------:| :---------------:| :---------------:| :---------------------:|
-|  1              | 33 48' 58" S 18 28' 22.0" E   |50°C              |85%               |Alert.HIGH_TEMPARATURE  |
-|  2              | 33 48' 58" S 18 28' 22.5" E   |25°C              |70%               |Alert.NO_ALERT          |
+| SENSORID        | LOCATION                      | TEMPERATURE      | HUMIDITY         | ALERT                  |SENSOR_TYPE	|
+| :--------------:| :----------------------------:| :---------------:| :---------------:| :---------------------:| :-----------:|
+|  1              | 33 48' 58" S 18 28' 22.0" E   |50°C              |85%               |Alert.HIGH_TEMPARATURE  |dh22		|
+|  2              | 33 48' 58" S 18 28' 22.5" E   |25°C              |70%               |Alert.NO_ALERT          |dh22		|
