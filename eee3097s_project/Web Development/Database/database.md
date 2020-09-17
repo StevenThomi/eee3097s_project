@@ -29,7 +29,7 @@ CREATE TABLE USER(
   
 	PASSWORD varchar(10),
   
-	LOGINSTATUS char(5),
+	LOGINSTATUS char(10),
   
 	ADMINISTRATION varchar(20)
   
