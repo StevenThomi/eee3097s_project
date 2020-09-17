@@ -7,3 +7,8 @@
 |  10th September 2020  | database - memory relationship and multiplicities defined    |
 |  10th September 2020  | dh22sensor, memory, RAM, EEPROM fields updated               |
 |  11th September 2020  | Timer class deleted - script imported library will suffice   |
+|  17th September 2020  | Raspberry Pi class data types and functions overhauled       |
+|  17th September 2020  | Network abstract class data types and functions overhauled   |
+|  17th September 2020  | Memory abstract class (as well as derived classes) deleted   |
+|  17th September 2020  | USB class deleted - replaced with Server class               |
+|  17th September 2020  | Bluetooth class datatypes and functions updated              |
