@@ -90,8 +90,8 @@ The following alterations were made to the structure of the table:
 ----
 <!-- blank line -->
 The following alterations were made to the structure of the table:
-- _SENSORID_ was set to be an unique field.
-- _TIME_ was set to be an unique field.
+- _SENSORID_ was set to be a primary key.
+- _TIME_ was set to be a primary key.
 
 ## Sample Output
 
