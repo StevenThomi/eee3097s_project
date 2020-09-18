@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 16, 2020 at 05:54 PM
+-- Generation Time: Sep 18, 2020 at 10:27 AM
 -- Server version: 8.0.11
 -- PHP Version: 7.3.11
 
@@ -25,15 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `READINGS`
+--
+
+CREATE TABLE `READINGS` (
+  `SENSORID` int(11) NOT NULL,
+  `TEMPERATURE` char(10) DEFAULT NULL,
+  `HUMIDITY` char(10) DEFAULT NULL,
+  `ALERT` char(35) DEFAULT NULL,
+  `TIME` char(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `SENSOR`
 --
 
 CREATE TABLE `SENSOR` (
   `SENSORID` int(11) NOT NULL,
   `LOCATION` char(25) DEFAULT NULL,
-  `TEMPERATURE` char(10) DEFAULT NULL,
-  `HUMIDITY` char(10) DEFAULT NULL,
-  `ALERT` char(35) DEFAULT NULL,
   `SENSOR_TYPE` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -48,13 +59,19 @@ CREATE TABLE `USER` (
   `NAME` varchar(20) DEFAULT NULL,
   `PHONE_NUMBER` char(10) DEFAULT NULL,
   `PASSWORD` varchar(10) DEFAULT NULL,
-  `LOGINSTATUS` char(10) DEFAULT NULL,
+  `LOGINSTATUS` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `ADMINISTRATION` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `READINGS`
+--
+ALTER TABLE `READINGS`
+  ADD PRIMARY KEY (`SENSORID`,`TIME`);
 
 --
 -- Indexes for table `SENSOR`
