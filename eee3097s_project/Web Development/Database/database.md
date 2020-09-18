@@ -90,8 +90,7 @@ The following alterations were made to the structure of the table:
 ----
 <!-- blank line -->
 The following alterations were made to the structure of the table:
-- _SENSORID_ was set to be a primary key.
-- _TIME_ was set to be a primary key.
+- _SENSORID_ and _TIME_ are set to be a composite key. (Technically speaking, _composite primary key_)
 
 ## Sample Output
 
