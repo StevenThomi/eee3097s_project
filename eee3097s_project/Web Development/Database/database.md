@@ -21,7 +21,7 @@ CREATE DATABASE FIRE_DETECTION;
 <!-- blank line -->
 	CREATE TABLE USER(
   
-    		USERID int,
+    	USERID int,
   
 		NAME varchar(20),
   
@@ -48,7 +48,7 @@ The following alterations were made to the structure of the table:
 <!-- blank line -->
 	CREATE TABLE SENSOR(
 
-    		SENSORID int,
+    	SENSORID int,
   
 		LOCATION char(25),
   
