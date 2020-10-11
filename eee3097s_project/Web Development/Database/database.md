@@ -50,14 +50,18 @@ The following alterations were made to the structure of the table:
 
     	SENSORID int,
   
-		LOCATION char(25),
-  
-		TEMPERATURE char(10),
-  
-		HUMIDITY char(10),
-  
-		ALERT char(35),
-  
+  		LATITUDE_degree int(2),
+		
+    	LATITUDE_minute int(2),
+		
+		LATITUDE_second int(3),
+		
+		LONGITUDE_degree int(2),
+		
+    	LONGITUDE_minute int(2),
+		
+		LONGITUDE_second int(3),
+		
 		SENSOR_TYPE varchar(10)
   
 	);
@@ -66,7 +70,6 @@ The following alterations were made to the structure of the table:
 <!-- blank line -->
 The following alterations were made to the structure of the table:
 - _SENSORID_ was set to be the primary key.
-- _LOCATION_ was set to be an unique field.
 
 4.  Table **READINGS** has been created in the database. It keeps track of registered sensors and their readings (ideal for many sensors). The following SQL command carries out the action:
 
@@ -101,10 +104,10 @@ The following alterations were made to the structure of the table:
 |  2              | Steve Thomi            |0715789786              |5678                    |Logged Out              |FireStation.EAST        |
 
 ### Sensor Table
-| SENSORID        | LOCATION                      |SENSOR_TYPE	|
-| :--------------:| :----------------------------:| :----------:|
-|  1              | 33 48' 58" S 18 28' 22.0" E   |dh22		|
-|  2              | 33 48' 58" S 18 28' 22.5" E   |dh22		|
+| SENSORID        |  LATITUDE_degree  |  LATITUDE_minute  |  LATITUDE_second  |  LONGITUDE_degree  |  LONGITUDE_minute  |  LONGITUDE_second  |  SENSOR_TYPE  |
+| :--------------:| :----------------:| :----------------:| :----------------:| :-----------------:| :-----------------:| :-----------------:| :------------:|
+|  1              | 33                | 48                | 58                | 18                 | 28                 | 22.0               | dh22	     |
+|  2              | 33                | 48                | 58                | 18                 | 28                 | 22.5               | dh22	     |
 
 ### Readings Table
 | SENSORID        | TEMPERATURE      | HUMIDITY         | ALERT                  |TIME		   |
