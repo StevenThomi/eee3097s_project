@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    a:link {
+      color: red;
+    }
+    a:visited {
+      color: green;
+    }
+    a:hover {
+      color: hotpink;
+    }
+    a:active {
+      color: blue;
+    }
+    img {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+    div {
+      padding: 20px;
+      border: 1px solid #4CAF50;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+  <script>
+  function validateCreateUserForm() {
+    var userID = document.forms["createUserForm"]["userID"].value;
+    var fname = document.forms["createUserForm"]["fname"].value;
+    var sname = document.forms["createUserForm"]["sname"].value;
+    var phone = document.forms["createUserForm"]["phone"].value;
+    var password = document.forms["createUserForm"]["password"].value;
+    var user = document.forms["createUserForm"]["user"].value;
+    var forest_department = document.forms["createUserForm"]["forest_department"].value;
+    var fire_department = document.forms["createUserForm"]["fire_department"].value;
+
+    if (isNaN(userID)) {
+      alert("User ID must be a number");
+      return false;
+    } else if (isNaN(phone)) {
+      alert("Phone number must be a number");
+      return false;
+    } else if (user == "")) {
+      alert("User must be filled out");
+      return false;
+    } else if (password == userID || password == fname || password == sname || password == phone)) {
+      alert("Use a strong password");
+      return false;
+    } else if (forest_department == "" && fire_department == "") {
+      alert("User department must be filled out");
+      return false;
+    } else {
+      return true;
+    }
+  }
+  </script>
+</head>
+<body>
+<center>
+<h1 >Fire Detection System</h1>
+<a href="home.html">
+  <img src="clipart/clipart.jpg" alt="Tree" width="100" height="100">
+</a>
+<a href="home.html">[Home]</a>
+<a href="create_User.html">[Create User Account]</a>
+<a href="login_User.html">[Login Account]</a>
+<a href="register_Sensor.html">[Register Sensor]</a>
+<a href="modify_Sensor.html">[Modify Sensor]</a>
+<a href="monitor.html">[Monitor]</a>
+<a href="documentation.html">[Documentation]</a><br>
+
+<h2>Create User Account</h2>
+  <form name="createUserForm" action="/create_User.py" onsubmit="return validateCreateUserForm()" method="post">
+    <label for="userID">User ID:</label><br>
+    <input type="text" id="userID" name="userID" required><br><br>
+
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" required><br><br>
+
+    <label for="sname">Surname:</label><br>
+    <input type="text" id="sname" name="sname" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="text" id="password" name="password" required><br><br>
+
+    <label>User Type & Department:</label><br><br>
+
+    <input type="radio" id="forestRanger" name="user" value="forestRanger">
+    <label for="forestRanger"> Forest Ranger</label><br><br>
+
+    <div>
+      <label for="forestRanger"> Forest Ranger Department</label><br>
+      <input type="radio" id="amazon" name="forest_department" value="amazon">
+      <label for="amazon"> Amazon Forest</label><br>
+
+      <input type="radio" id="congo" name="forest_department" value="congo">
+      <label for="congo"> Congo Forest</label><br>
+
+      <input type="radio" id="burmese" name="forest_department" value="burmese">
+      <label for="burmese"> Burmese Forest</label><br>
+
+      <input type="radio" id="borneo" name="forest_department" value="borneo">
+      <label for="borneo"> Borneo Forest</label><br>
+
+      <input type="radio" id="valdivian" name="forest_department" value="valdivian">
+      <label for="valdivian"> Valdivian Forest</label><br>
+    </div><br>
+
+    <input type="radio" id="fireMarshall" name="user" value="fireMarshall">
+    <label for="fireMarshall"> Fire Marshall</label><br><br>
+    <div>
+      <label for="fireMarshall"> Fire Marshall Department</label><br>
+      <input type="radio" id="north" name="fire_department" value="north">
+      <label for="north"> North Fire Department</label><br>
+
+      <input type="radio" id="south" name="fire_department" value="south">
+      <label for="south"> South Fire Department</label><br>
+
+      <input type="radio" id="east" name="fire_department" value="east">
+      <label for="east"> East Fire Department</label><br>
+
+      <input type="radio" id="west" name="fire_department" value="west">
+      <label for="west"> West Fire Department</label><br>
+
+      <input type="radio" id="center" name="fire_department" value="center">
+      <label for="center"> Center Fire Department</label><br>
+    </div>
+
+  <input type="submit" value="Create Account">
+</form>
+
+</center>
+</body>
+</html>

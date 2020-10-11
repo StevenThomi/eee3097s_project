@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    a:link {
+      color: red;
+    }
+    a:visited {
+      color: green;
+    }
+    a:hover {
+      color: hotpink;
+    }
+    a:active {
+      color: blue;
+    }
+    img {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+    div {
+      padding: 20px;
+      border: 1px solid #4CAF50;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+  <script>
+  function validateModifySensorForm() {
+    var modSensorID = document.forms["modifySensorForm"]["modSensorID"].value;
+    var modLatitude = document.forms["modifySensorForm"]["modLatitude"].value;
+    var modLongitude = document.forms["modifySensorForm"]["modLongitude"].value;
+
+    var sensorID = document.forms["modifySensorForm"]["sensorID"].value;
+    var lat_degrees = document.forms["modifySensorForm"]["lat_degrees"].value;
+    var lat_minutes = document.forms["modifySensorForm"]["lat_minutes"].value;
+    var lat_seconds = document.forms["modifySensorForm"]["lat_seconds"].value;
+    var long_degrees = document.forms["modifySensorForm"]["long_degrees"].value;
+    var long_minutes = document.forms["modifySensorForm"]["long_minutes"].value;
+    var long_seconds = document.forms["modifySensorForm"]["long_seconds"].value;
+
+    if (modSensorID != "" && sensorID == "") {
+      alert("Sensor ID must be filled out");
+      return false;
+    } else if (modLatitude != "" && (lat_degrees == "" || lat_minutes == "" || lat_seconds == "")) {
+      alert("Latitude degrees, minutes, and seconds must be filled out");
+      return false;
+    } else if (modLongitude != "" && (long_degrees == "" || long_minutes == "" || long_seconds == "")) {
+      alert("Longitude degrees, minutes, and seconds must be filled out");
+      return false;
+    } else if (modSensorID == "" && modLatitude == "" && modLongitude == "") {
+      alert("Modification field must be filled out");
+      return false;
+    } else if (modSensorID != "" && isNaN(sensorID)) {
+      alert("Sensor ID must be a number.");
+      return false;
+    } else if (modLatitude != "" && (isNaN(lat_degrees) || isNaN(at_minutes) || isNaN(lat_seconds))) {
+      alert("Latitude format mismatch");
+      return false;
+    } else if (modLongitude != "" && (isNaN(long_degrees) || isNaN(long_minutes) || isNaN(long_seconds))) {
+      alert("Longitude format mismatch");
+      return false;
+    } else {
+      return true;
+    }
+  }
+  </script>
+</head>
+<body>
+<center>
+<h1 >Fire Detection System</h1>
+<a href="home.html">
+  <img src="clipart/clipart.jpg" alt="Tree" width="100" height="100">
+</a>
+<a href="home.html">[Home]</a>
+<a href="create_User.html">[Create User Account]</a>
+<a href="login_User.html">[Login Account]</a>
+<a href="register_Sensor.html">[Register Sensor]</a>
+<a href="modify_Sensor.html">[Modify Sensor]</a>
+<a href="monitor.html">[Monitor]</a>
+<a href="documentation.html">[Documentation]</a><br>
+
+<h2>Modify Sensor</h2>
+  <form name="modifySensorForm" action="/modify_Sensor.py" onsubmit="return validateModifySensorForm()" method="post">
+
+    <input type="radio" id="modSensorID" name="modify" value="modSensorID">
+    <label for="modSensorID"> Modify Sensor ID</label><br>
+
+    <input type="radio" id="modLatitude" name="modify" value="modLatitude">
+    <label for="modLatitude"> Modify Latitude</label><br>
+
+    <input type="radio" id="modLongitude" name="modify" value="modLongitude">
+    <label for="modLongitude"> Modify Longitude</label><br><br>
+
+    <label for="sensorID">Sensor ID:</label><br>
+    <input type="text" id="sensorID" name="sensorID"><br><br>
+
+    <label for="location">Location:</label>
+    <div>
+      <label for="latitude">Latitude:</label><br>
+      <input type="text" id="latitude" name = "lat_degrees" value="degrees (33°)">
+      <input type="text" id="latitude" name = "lat_minutes" value="minutes (48')">
+      <input type="text" id="latitude" name = "lat_seconds" value='seconds (58.8")'>
+      <label>S</label><br>
+    </div><br>
+    <div>
+      <label for="longitude">Longitude:</label><br>
+      <input type="text" id="longitude" name = "long_degrees" value="degrees (18°)">
+      <input type="text" id="longitude" name = "long_minutes" value="minutes (28')">
+      <input type="text" id="longitude" name = "long_seconds" value='seconds (22.0")'>
+      <label>E</label><br>
+    </div><br>
+    <h4 style="color:red">Input Guide</h4>
+    <p style="color:red">Input of formatting characters (',",°) is not necessary.</p>
+    <p style="color:red">Only the second field allows input of up to 3 digits.</p><br>
+  <input type="submit" value="Modify Sensor">
+
+</form>
+
+</center>
+</body>
+</html>

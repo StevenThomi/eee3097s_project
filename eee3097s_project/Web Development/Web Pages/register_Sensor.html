@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    a:link {
+      color: red;
+    }
+    a:visited {
+      color: green;
+    }
+    a:hover {
+      color: hotpink;
+    }
+    a:active {
+      color: blue;
+    }
+    img {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+    div {
+      padding: 20px;
+      border: 1px solid #4CAF50;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+  <script>
+  function validateRegisterSensorForm() {
+    var sensorID = document.forms["registerSensorForm"]["sensorID"].value;
+    var lat_degrees = document.forms["registerSensorForm"]["lat_degrees"].value;
+    var lat_minutes = document.forms["registerSensorForm"]["lat_minutes"].value;
+    var lat_seconds = document.forms["registerSensorForm"]["lat_seconds"].value;
+    var long_degrees = document.forms["registerSensorForm"]["long_degrees"].value;
+    var long_minutes = document.forms["registerSensorForm"]["long_minutes"].value;
+    var long_seconds = document.forms["registerSensorForm"]["long_seconds"].value;
+
+    if (isNaN(sensorID)) {
+      alert("Sensor ID must be filled out");
+      return false;
+    } else if (isNaN(lat_degrees) || lat_degrees > 90 || lat_degrees < 0) {
+      alert("Latitude degrees input mismatch");
+      return false;
+    } else if (isNaN(lat_minutes) || lat_minutes > 60 || lat_minutes < 0) {
+      alert("Latitude minutes input mismatch");
+      return false;
+    } else if (isNaN(lat_seconds) || lat_seconds > 60 || lat_seconds < 0) {
+      alert("Latitude seconds input mismatch");
+      return false;
+    } else if (isNaN(long_degrees) || long_degrees > 180 || long_degrees < 0) {
+      alert("Longitude degrees input mismatch");
+      return false;
+    } else if (isNaN(long_minutes) || long_minutes > 60 || long_minutes < 0) {
+      alert("Longitude minutes input mismatch");
+      return false;
+    } else if (isNaN(long_seconds) || long_seconds > 60 || long_seconds < 0) {
+      alert("Longitude seconds input mismatch");
+      return false;
+    } else {
+      return true;
+    }
+  }
+  </script>
+</head>
+<body>
+<center>
+<h1 >Fire Detection System</h1>
+<a href="home.html">
+  <img src="clipart/clipart.jpg" alt="Tree" width="100" height="100">
+</a>
+<a href="home.html">[Home]</a>
+<a href="create_User.html">[Create User Account]</a>
+<a href="login_User.html">[Login Account]</a>
+<a href="register_Sensor.html">[Register Sensor]</a>
+<a href="modify_Sensor.html">[Modify Sensor]</a>
+<a href="monitor.html">[Monitor]</a>
+<a href="documentation.html">[Documentation]</a><br>
+
+<h2>Register Sensor</h2>
+  <form name="registerSensorForm" action="/register_Sensor.py" onsubmit="return validateRegisterSensorForm()" method="post">
+    <label for="sensorID">Sensor ID:</label><br>
+    <input type="text" id="sensorID" name="sensorID" required><br><br>
+
+    <label for="location">Location:</label>
+    <div>
+      <label for="latitude">Latitude:</label><br>
+      <input type="text" id="latitude" name = "lat_degrees" value="degrees (33°)" required>
+      <input type="text" id="latitude" name = "lat_minutes" value="minutes (48')" required>
+      <input type="text" id="latitude" name = "lat_seconds" value='seconds (58.8")' required>
+      <label>S</label><br>
+    </div><br>
+    <div>
+      <label for="longitude">Longitude:</label><br>
+      <input type="text" id="longitude" name = "long_degrees" value="degrees (18°)" required>
+      <input type="text" id="longitude" name = "long_minutes" value="minutes (28')" required>
+      <input type="text" id="longitude" name = "long_seconds" value='seconds (22.0")' required>
+      <label>E</label><br>
+    </div><br>
+    <h4 style="color:red">Input Guide</h4>
+    <p style="color:red">Input of formatting characters (',",°) is not necessary.</p>
+  <input type="submit" value="Register Sensor">
+
+</form>
+
+</center>
+</body>
+</html>

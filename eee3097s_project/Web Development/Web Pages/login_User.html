@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    a:link {
+      color: red;
+    }
+    a:visited {
+      color: green;
+    }
+    a:hover {
+      color: hotpink;
+    }
+    a:active {
+      color: blue;
+    }
+    img {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+    div {
+      padding: 20px;
+      border: 1px solid #4CAF50;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+  <script>
+  function validateLoginUserForm() {
+    var userID = document.forms["loginUserForm"]["userID"].value;
+
+    if (isNaN(userID)) {
+      alert("User ID must be filled out");
+      return false;
+    } else {
+      return true;
+    }
+  }
+  </script>
+</head>
+<body>
+<center>
+<h1>Fire Detection System</h1>
+<a href="home.html">
+  <img src="clipart/clipart.jpg" alt="Tree" width="100" height="100">
+</a>
+<a href="home.html">[Home]</a>
+<a href="create_User.html">[Create User Account]</a>
+<a href="login_User.html">[Login Account]</a>
+<a href="register_Sensor.html">[Register Sensor]</a>
+<a href="modify_Sensor.html">[Modify Sensor]</a>
+<a href="monitor.html">[Monitor]</a>
+<a href="documentation.html">[Documentation]</a>
+
+<h2>Account Login</h2>
+  <form name="loginUserForm" action="/login_User.py" onsubmit="return validateLoginUserForm()" method="post">
+    <label for="userID">User ID:</label><br>
+    <input type="text" id="userID" name="userID" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="text" id="password" name="password" required><br><br>
+
+  <input type="submit" value="Login">
+</form>
+
+</center>
+</body>
+</html>
