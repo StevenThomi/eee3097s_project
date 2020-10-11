@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 18, 2020 at 10:27 AM
+-- Generation Time: Oct 11, 2020 at 09:12 AM
 -- Server version: 8.0.11
 -- PHP Version: 7.3.11
 
@@ -44,7 +44,12 @@ CREATE TABLE `READINGS` (
 
 CREATE TABLE `SENSOR` (
   `SENSORID` int(11) NOT NULL,
-  `LOCATION` char(25) DEFAULT NULL,
+  `LATITUDE_degree` int(2) DEFAULT NULL,
+  `LATITUDE_minute` int(2) DEFAULT NULL,
+  `LATITUDE_second` int(3) DEFAULT NULL,
+  `LONGITUDE_degree` int(2) DEFAULT NULL,
+  `LONGITUDE_minute` int(2) DEFAULT NULL,
+  `LONGITUDE_second` int(3) DEFAULT NULL,
   `SENSOR_TYPE` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -60,7 +65,7 @@ CREATE TABLE `USER` (
   `PHONE_NUMBER` char(10) DEFAULT NULL,
   `PASSWORD` varchar(10) DEFAULT NULL,
   `LOGINSTATUS` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `ADMINISTRATION` varchar(20) DEFAULT NULL
+  `DEPARTMENT` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -77,8 +82,7 @@ ALTER TABLE `READINGS`
 -- Indexes for table `SENSOR`
 --
 ALTER TABLE `SENSOR`
-  ADD PRIMARY KEY (`SENSORID`),
-  ADD UNIQUE KEY `LOCATION` (`LOCATION`);
+  ADD PRIMARY KEY (`SENSORID`);
 
 --
 -- Indexes for table `USER`
