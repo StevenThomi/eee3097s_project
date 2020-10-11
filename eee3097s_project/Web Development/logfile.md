@@ -11,4 +11,6 @@
 |                       | SENSORID int, TEMPERATURE char(10), HUMIDITY char(10), ALERT char(35), TIME char(16)   |
 |                       | );                                                                                     |
 |  18th September 2020  | ALTER TABLE READINGS                                                                   |
-|                       | ADD PRIMARY KEY(`SENSORID`,`TIME`);                                                                     |
+|                       | ADD PRIMARY KEY(`SENSORID`,`TIME`);                                                    |
+|  11th October 2020    | REMOVE UNIQUE KEY LOCATION, DROP TEMPERATURE, HUMIDITY, ALERT FIELDS.                  |
+|                       | LOCATION FIELD REPLACED WITH DEGREE, MINUTE, SECOND FIELD FOR LATITUDE AND LONGITUDE   |
