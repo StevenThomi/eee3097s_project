@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <style>
+  <style type="text/css">
     a:link {
       color: red;
     }
@@ -29,12 +29,12 @@
       text-align: center;
     }
   </style>
-  <script>
+  <script type="text/javascript">
   function validateLoginUserForm() {
     var userID = document.forms["loginUserForm"]["userID"].value;
 
     if (isNaN(userID)) {
-      alert("User ID must be filled out");
+      alert("User ID must be a number");
       return false;
     } else {
       return true;
@@ -57,7 +57,7 @@
 <a href="documentation.html">[Documentation]</a>
 
 <h2>Account Login</h2>
-  <form name="loginUserForm" action="/login_User.py" onsubmit="return validateLoginUserForm()" method="post">
+  <form name="loginUserForm" action="server_side/login_User.py" onsubmit="return validateLoginUserForm()" method="get">
     <label for="userID">User ID:</label><br>
     <input type="text" id="userID" name="userID" required><br><br>
 
