@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <style>
+  <style type="text/css">
     a:link {
       color: red;
     }
@@ -29,7 +29,7 @@
       text-align: center;
     }
   </style>
-  <script>
+  <script type="text/javascript">
   function validateRegisterSensorForm() {
     var sensorID = document.forms["registerSensorForm"]["sensorID"].value;
     var lat_degrees = document.forms["registerSensorForm"]["lat_degrees"].value;
@@ -81,7 +81,7 @@
 <a href="documentation.html">[Documentation]</a><br>
 
 <h2>Register Sensor</h2>
-  <form name="registerSensorForm" action="/register_Sensor.py" onsubmit="return validateRegisterSensorForm()" method="post">
+  <form name="registerSensorForm" action="server_side/register_Sensor.py" onsubmit="return validateRegisterSensorForm()" method="post">
     <label for="sensorID">Sensor ID:</label><br>
     <input type="text" id="sensorID" name="sensorID" required><br><br>
 
