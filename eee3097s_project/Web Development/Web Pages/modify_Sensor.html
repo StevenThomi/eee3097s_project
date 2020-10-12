@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <style>
+  <style type="text/css">
     a:link {
       color: red;
     }
@@ -29,7 +29,7 @@
       text-align: center;
     }
   </style>
-  <script>
+  <script type="text/javascript">
   function validateModifySensorForm() {
     var modSensorID = document.forms["modifySensorForm"]["modSensorID"].value;
     var modLatitude = document.forms["modifySensorForm"]["modLatitude"].value;
@@ -85,7 +85,7 @@
 <a href="documentation.html">[Documentation]</a><br>
 
 <h2>Modify Sensor</h2>
-  <form name="modifySensorForm" action="/modify_Sensor.py" onsubmit="return validateModifySensorForm()" method="post">
+  <form name="modifySensorForm" action="server_side/modify_Sensor.py" onsubmit="return validateModifySensorForm()" method="post">
 
     <input type="radio" id="modSensorID" name="modify" value="modSensorID">
     <label for="modSensorID"> Modify Sensor ID</label><br>
@@ -116,7 +116,6 @@
     </div><br>
     <h4 style="color:red">Input Guide</h4>
     <p style="color:red">Input of formatting characters (',",°) is not necessary.</p>
-    <p style="color:red">Only the second field allows input of up to 3 digits.</p><br>
   <input type="submit" value="Modify Sensor">
 
 </form>
