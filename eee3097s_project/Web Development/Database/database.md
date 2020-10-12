@@ -50,17 +50,17 @@ The following alterations were made to the structure of the table:
 
     	SENSORID int,
   
-  		LATITUDE_degree int(2),
+  		LATITUDE_degree int(5),
 		
-    	LATITUDE_minute int(2),
+    	LATITUDE_minute int(5),
 		
-		LATITUDE_second int(3),
+		LATITUDE_second int(5),
 		
-		LONGITUDE_degree int(2),
+		LONGITUDE_degree int(5),
 		
-    	LONGITUDE_minute int(2),
+    	LONGITUDE_minute int(5),
 		
-		LONGITUDE_second int(3),
+		LONGITUDE_second int(5),
 		
 		SENSOR_TYPE varchar(10)
   
