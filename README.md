@@ -15,7 +15,7 @@ As a result of lacking a temperature-controlled solder iron, oscilloscope, or a 
 
 The sensor has proven to be faulty; the power ON LED fails to work for the default logic level (3V3). 
 
-The I2C protocol as well has been enhanced, to enable a sleep-mode operation of the sensor - to reduce operational heating. The libraries required to jump start the sensor's I2C configuration are available on Wiring.h (an Arduino library), but not availabe on WiringPi (the Raspberry Pi equivalent libraries). The soldered surface-mount jumpers facilitate a change of interface to the One-Wire configuration; which I would have preferred due to its improved standardisation.
+The I2C protocol as well has been enhanced, to enable a sleep-mode operation of the sensor - to reduce operational heating. The libraries required to jump start the sensor's I2C configuration are available on Wire.h (an Arduino library), but not availabe on WiringPi (the Raspberry Pi equivalent libraries). The soldered surface-mount jumpers facilitate a change of interface to the One-Wire configuration; which I would have preferred due to its improved standardisation.
 
 ## Alternate Theory:
 As enhanced in the  tools list below, the analog input sensors - the Light Dependent Resistor, and the MCP9700 Temperature Sensor - have taked a forefront in my development effort, and my attempt to satisfactorily meet the use case.
