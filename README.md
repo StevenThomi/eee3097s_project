@@ -3,7 +3,7 @@
 ## Electrical and Computer Engineering Practical Design and Implementation
 
 ## Aim:
-Using a small single-board computer, develop an IoT application to generate a temperature and humidity mapping of a wide geometrical location.
+Using a small single-board computer, develop an IoT application to generate a temperature and humidity mapping of a wide geographical location.
 
 ## Use Case:
 The temperature and humidity mapping can be used in the following areas:
