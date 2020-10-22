@@ -15,7 +15,7 @@ The temperature and humidity mapping can be used in the following areas:
 *― Emmert Wolf*
 
 The following tools are at my disposal:
-- 1x DHT22 2 Click Temperature & Humidity Sensor Add On Board with CM2322
+- 1x CM2322 Sensor
 - 1x Raspberry Pi Zero kit
 - 1x 40 way M/M ribbon strip
 - 1x 40 way M/F ribbon strip
