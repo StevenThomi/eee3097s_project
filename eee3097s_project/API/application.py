@@ -9,10 +9,10 @@ def main():
     # Create Sensor object
     sense = Sensor()
 
-    while True:
-        # Setup the SPI bus
-        bus.busSetup()
+    # Setup the SPI bus
+    bus.busSetup()
 
+    while True:
         # Retrieve the SPI bus
         channel_1, channel_2 = bus.getBus()
 
