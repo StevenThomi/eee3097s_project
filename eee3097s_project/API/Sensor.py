@@ -1,26 +1,21 @@
 # Sensor class
 class Sensor:
-    def __init__(self,val_t=0,val_l=0,temperatureC=0,temperatureF=0,luminosity=0):
-        self.val_t = val_t
-        self.val_l = val_l
+    def __init__(self,temperatureC=0,temperatureF=0,luminosity=0):
         self.temperatureC = temperatureC
         self.temperatureF = temperatureF
         self.luminosity = luminosity
 
-    def setTemperatureInC(self, val_t):
+    def setTemperatureInC(self, channel=0):
         # calculate temperature in degrees C
-        self.val_t = val_t
-        self.temperatureC = self.val_t/1024
+        self.temperatureC = channel/1024
 
-    def setTemperatureInF(self, val_t):
+    def setTemperatureInF(self, channel=0):
         # calculate temperature in degrees F
-        self.val_t = val_t
-        self.temperatureF = ((self.val_t/1024)*(9/5))+32
+        self.temperatureF = ((channel/1024)*(9/5))+32
 
-    def setLuminosity(self, val_l):
+    def setLuminosity(self, channel=0):
         # calculate luminosity as a percentage
-        self.val_l = val_l
-        self.luminosity = (self.val_l-1850)/655
+        self.luminosity = (channel-1850)/655
 
     def getTemperatureInC(self):
         # return temperature in C
