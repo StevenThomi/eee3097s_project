@@ -30,9 +30,13 @@ class Setup:
         analogIn2 = AnalogIn(mcp2, MCP.P1)
 
         # return analog input
-        self.analogIn1 = analogIn1.value
-        self.analogIn2 = analogIn2.value
+        self.analogIn1 = analogIn1
+        self.analogIn2 = analogIn2
 
     def getBus(self):
-       # retrieve SPI bus
-       return self.analogIn1, self.analogIn2
+        # retrieve channel values
+        analogIn1 = self.analogIn1
+        analogIn2 = self.analogIn2
+
+        # return channel values
+        return analogIn1.value, analogIn2.value
