@@ -14,14 +14,14 @@ def main():
         bus.busSetup()
 
         # Retrieve the SPI bus
-        value1, value2 = bus.getBus()
+        channel_1, channel_2 = bus.getBus()
 
         # Setup the sensors
-        sense.setTemperatureInC(value1)
+        sense.setTemperatureInC(channel_1)
 
-        sense.setTemperatureInF(value1)
+        sense.setTemperatureInF(channel_1)
 
-        sense.setLuminosity(value2)
+        sense.setLuminosity(channel_2)
 
         # Fetch temperature in degrees C
         temperatureC = sense.getTemperatureInC()
