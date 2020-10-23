@@ -3,13 +3,13 @@ from Setup import Setup
 from time import sleep
 
 def main():
+    # Create Setup object
+    bus = Setup()
+
+    # Create Sensor object
+    sense = Sensor()
+
     while True:
-        # Create Setup object
-        bus = Setup()
-
-        # Create Sensor object
-        sense = Sensor()
-
         # Setup the SPI bus
         bus.busSetup()
 
