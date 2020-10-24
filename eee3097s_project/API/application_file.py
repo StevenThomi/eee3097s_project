@@ -1,6 +1,7 @@
 from Sensor import Sensor
 from Setup import Setup
 from time import sleep
+from datetime import datetime
 
 def main():
     # Create Setup object
@@ -36,7 +37,7 @@ def main():
         outfile = open(r"/home/pi/share/data.txt", "a")
 
         # Write temperature and luminosity readings to file
-        outfile.write("\n{:5.2f}\t\t{:6.2f}".format(temperatureC,luminosity))
+        outfile.write("\n{:5.2f}\t\t{:6.2f}\t\t{}".format(temperatureC,luminosity,datetime.now()))
 
         # Close file stream
         outfile.close() # Close the input file
