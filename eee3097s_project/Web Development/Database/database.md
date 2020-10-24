@@ -28,9 +28,7 @@ CREATE DATABASE FIRE_DETECTION;
 		PHONE_NUMBER char(10),
   
 		PASSWORD varchar(10),
-  
-		LOGINSTATUS char(10),
-  
+    
 		ADMINISTRATION varchar(20)
   
 	);
@@ -61,9 +59,7 @@ The following alterations were made to the structure of the table:
     	LONGITUDE_minute int(5),
 		
 		LONGITUDE_second int(5),
-		
-		SENSOR_TYPE varchar(10)
-  
+		  
 	);
 <!-- blank line -->
 ----
@@ -80,9 +76,9 @@ The following alterations were made to the structure of the table:
     		
 		SENSORID int,
     		
-		TEMPERATURE char(10),
+		TEMPERATURE char(5),
     		
-		HUMIDITY char(10),
+		LUMINOSITY char(5),
     		
 		ALERT char(35),
     		
@@ -98,21 +94,21 @@ The following alterations were made to the structure of the table:
 ## Sample Output
 
 ### User Table
-| USERID          | NAME                   | PHONE_NUMBER           | PASSWORD               | LOGINSTATUS            | ADMINISTRATION         |
-| :--------------:| :---------------------:| :---------------------:| :---------------------:| :---------------------:| :---------------------:|
-|  1              | Steven Thomi           |0701071594              |1234                    |Logged In               |Forest.CONGO            |
-|  2              | Steve Thomi            |0715789786              |5678                    |Logged Out              |FireStation.EAST        |
+| USERID          | NAME                   | PHONE_NUMBER           | PASSWORD               | ADMINISTRATION         |
+| :--------------:| :---------------------:| :---------------------:| :---------------------:| :---------------------:|
+|  1              | Steven Thomi           |0701071594              |1234                    |Forest.CONGO            |
+|  2              | Steve Thomi            |0715789786              |5678                    |FireStation.EAST        |
 
 ### Sensor Table
-| SENSORID        |  LATITUDE_degree  |  LATITUDE_minute  |  LATITUDE_second  |  LONGITUDE_degree  |  LONGITUDE_minute  |  LONGITUDE_second  |  SENSOR_TYPE  |
-| :--------------:| :----------------:| :----------------:| :----------------:| :-----------------:| :-----------------:| :-----------------:| :------------:|
-|  1              | 33                | 48                | 58                | 18                 | 28                 | 22.0               | dh22	     |
-|  2              | 33                | 48                | 58                | 18                 | 28                 | 22.5               | dh22	     |
+| SENSORID        |  LATITUDE_degree  |  LATITUDE_minute  |  LATITUDE_second  |  LONGITUDE_degree  |  LONGITUDE_minute  |  LONGITUDE_second  |
+| :--------------:| :----------------:| :----------------:| :----------------:| :-----------------:| :-----------------:| :-----------------:|
+|  1              | 33                | 48                | 58                | 18                 | 28                 | 22.0               |
+|  2              | 33                | 48                | 58                | 18                 | 28                 | 22.5               |
 
 ### Readings Table
-| SENSORID        | TEMPERATURE      | HUMIDITY         | ALERT                  |TIME		   |
-| :--------------:| :---------------:| :---------------:| :---------------------:| :--------------:|
-|  1              |50°C              |85%               |Alert.HIGH_TEMPARATURE  |18-09-2020 13:30 |
-|  2              |25°C              |70%               |Alert.NO_ALERT          |18-09-2020 13:35 |
+| SENSORID        | TEMPERATURE      | LUMINOSITY       | ALERT                  | TIME		      |
+| :--------------:| :---------------:| :---------------:| :---------------------:| :-----------------:|
+|  1              |50°C              |55%               |Alert.HIGH_TEMPARATURE  |2012-10-25 09:27:53 |
+|  2              |25°C              |20%               |Alert.NO_ALERT          |2012-10-25 09:32:53 |
 
 **N.B. This document is modified alongside the logfile to maintain a common vision throughout the repository.**
