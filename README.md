@@ -22,9 +22,7 @@ As enhanced in the  tools list below, the analog input sensors - the Light Depen
 
 The temperature and light intensity mapping can be used to identify forest fires through:
 - identifying temperature spikes
-- identifying persevering light intensity changes
-
-To further explain the last point; in sunny parts of the forest the sunlight light intensity overbears the flame light intensity, causing the observable change to be in the smoke particle density, while in darker parts of the forest the absence of sunlight light intensity causes the flame light intensity to be a more observable change.
+- identifying persevering light intensity dips
 
 ## Tools:
 >“A man is only as good as his tools.”  
