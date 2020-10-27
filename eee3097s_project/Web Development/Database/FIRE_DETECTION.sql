@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 11, 2020 at 09:12 AM
+-- Generation Time: Oct 27, 2020 at 08:31 AM
 -- Server version: 8.0.11
 -- PHP Version: 7.3.11
 
@@ -30,11 +30,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `READINGS` (
   `SENSORID` int(11) NOT NULL,
-  `TEMPERATURE` char(10) DEFAULT NULL,
-  `HUMIDITY` char(10) DEFAULT NULL,
-  `ALERT` char(35) DEFAULT NULL,
-  `TIME` char(16) NOT NULL
+  `TEMPERATURE` char(5) DEFAULT NULL,
+  `LUMINOSITY` char(5) DEFAULT NULL,
+  `ALERT` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `DATE_TIME` char(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `READINGS`
+--
+
+INSERT INTO `READINGS` (`SENSORID`, `TEMPERATURE`, `LUMINOSITY`, `ALERT`, `DATE_TIME`) VALUES
+(5678, '16.19', '15.2', '0', '	2020-10-26 15:03:1'),
+(5678, '15.25', '15.1', '0', '	2020-10-26 15:03:4'),
+(5678, '15.56', '15.1', '0', '	2020-10-26 15:04:1'),
+(5678, '15.5', '14.8', '0', '	2020-10-26 15:04:4');
 
 -- --------------------------------------------------------
 
@@ -46,12 +56,18 @@ CREATE TABLE `SENSOR` (
   `SENSORID` int(11) NOT NULL,
   `LATITUDE_degree` int(5) DEFAULT NULL,
   `LATITUDE_minute` int(5) DEFAULT NULL,
-  `LATITUDE_second` int(5) DEFAULT NULL,
+  `LATITUDE_second` decimal(10,2) DEFAULT NULL,
   `LONGITUDE_degree` int(5) DEFAULT NULL,
   `LONGITUDE_minute` int(5) DEFAULT NULL,
-  `LONGITUDE_second` int(5) DEFAULT NULL,
-  `SENSOR_TYPE` varchar(10) DEFAULT NULL
+  `LONGITUDE_second` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `SENSOR`
+--
+
+INSERT INTO `SENSOR` (`SENSORID`, `LATITUDE_degree`, `LATITUDE_minute`, `LATITUDE_second`, `LONGITUDE_degree`, `LONGITUDE_minute`, `LONGITUDE_second`) VALUES
+(5678, 33, 48, '58.80', 18, 28, '22.00');
 
 -- --------------------------------------------------------
 
@@ -63,10 +79,16 @@ CREATE TABLE `USER` (
   `USERID` int(11) NOT NULL,
   `NAME` varchar(20) DEFAULT NULL,
   `PHONE_NUMBER` char(10) DEFAULT NULL,
-  `PASSWORD` varchar(10) DEFAULT NULL,
-  `LOGINSTATUS` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `PASSWORD` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `DEPARTMENT` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `USER`
+--
+
+INSERT INTO `USER` (`USERID`, `NAME`, `PHONE_NUMBER`, `PASSWORD`, `DEPARTMENT`) VALUES
+(1234, 'Steve Thomi', '0719786789', 'strongPassword', 'Forest.CONGO');
 
 --
 -- Indexes for dumped tables
@@ -76,7 +98,7 @@ CREATE TABLE `USER` (
 -- Indexes for table `READINGS`
 --
 ALTER TABLE `READINGS`
-  ADD PRIMARY KEY (`SENSORID`,`TIME`);
+  ADD PRIMARY KEY (`SENSORID`,`DATE_TIME`);
 
 --
 -- Indexes for table `SENSOR`
