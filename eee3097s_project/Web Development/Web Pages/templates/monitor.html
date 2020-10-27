@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+    a:link {
+      color: red;
+    }
+    a:visited {
+      color: green;
+    }
+    a:hover {
+      color: hotpink;
+    }
+    a:active {
+      color: blue;
+    }
+    div {
+      padding: 20px;
+      border: 1px solid #4CAF50;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<center>
+<h1 >Fire Detection System</h1>
+<a href="home">
+  <img style="position: absolute; right: 0px; top: 0px; z-index: -1;" src="{{url_for('static', filename='clipart.jpg')}}" alt="Tree" width="100" height="100">
+</a>
+<a href="home">[Home]</a>
+<a href="create_User">[Create User Account]</a>
+<a href="login_User">[Login Account]</a>
+<a href="register_Sensor">[Register Sensor]</a>
+<a href="modify_Sensor">[Modify Sensor]</a>
+<a href="monitor">[Monitor]</a>
+<a href="documentation">[Documentation]</a><br>
+
+<h2>Monitor Sensor</h2>
+
+  <img src="{{url_for('static', filename='sensor1.jpg')}}" alt="Sensor 1 Monitor" width="500" height="500">
+  <h3>Latest Recordings</h3>
+  <form name="monitorForm" action="/monitor" onsubmit="return validateLoginUserForm()" method="post">
+    <div>
+      {% if temperature %}
+      <p>Temperature: {{temperature}}</p>
+      <p>Luminosity: {{luminosity}}</p>
+      <p>Time: {{time}}</p>
+      <p>Alert: {{alert}}</p>
+      {% endif %}
+    </div>
+  <input type="submit" value="Refresh">
+</form>
+</center>
+</body>
+</html>
