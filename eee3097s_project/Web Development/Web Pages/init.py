@@ -235,7 +235,7 @@ def graph():
     for x in t_x:
         y.append(i)
         i += 30
-import numpy as np
+        
 def create_figure():
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1)
