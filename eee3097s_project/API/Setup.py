@@ -9,8 +9,8 @@ from adafruit_mcp3xxx.analog_in import AnalogIn
 
 class Setup:
     def __init__(self):
-        self.analogIn1 = 0
-        self.analogIn2 = 0
+        self.__analogIn1 = 0
+        self.__analogIn2 = 0
 
     def busSetup(self): 
         # Setting up the ADC SPI interface
@@ -30,13 +30,13 @@ class Setup:
         analogIn2 = AnalogIn(mcp2, MCP.P1)
 
         # return analog input
-        self.analogIn1 = analogIn1
-        self.analogIn2 = analogIn2
+        self.__analogIn1 = analogIn1
+        self.__analogIn2 = analogIn2
 
     def getBus(self):
         # retrieve channel values
-        analogIn1 = self.analogIn1
-        analogIn2 = self.analogIn2
+        analogIn1 = self.__analogIn1
+        analogIn2 = self.__analogIn2
 
         # return channel values
         return analogIn1.value, analogIn2.value
