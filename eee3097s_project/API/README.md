@@ -8,4 +8,15 @@ The following files illustrate the functioning of the API:
 - application_console.py - prints the sensor output to the screen
 - application_file.py - prints the sensor output to a text file (data.txt)
 
-This functionality is interfaced with the Flask Web Application using **Samba file sharing**.
+The API's functionality is interfaced with the Flask Web Application using **Samba file sharing**.
+
+The API requires the following libraries to run:
+- busio
+- digitalio
+- board
+- adafruit_mcp3xxx.mcp3008
+- adafruit_mcp3xxx.analog_in
+
+These libraries can be installed on the Raspberry Pi using the following commands:
+- apt install build-essential python3-dev python3-smbus python3-pip
+- pip3 install adafruit-circuitpython-mcp3xxx
