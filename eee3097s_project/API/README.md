@@ -18,5 +18,4 @@ The API requires the following libraries to run:
 - adafruit_mcp3xxx.analog_in
 
 These libraries can be installed on the Raspberry Pi using the following commands:
-- apt install build-essential python3-dev python3-smbus python3-pip
 - pip3 install adafruit-circuitpython-mcp3xxx
