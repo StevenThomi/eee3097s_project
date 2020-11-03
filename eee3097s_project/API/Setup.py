@@ -1,6 +1,8 @@
-# ADC (MCP3008) support libraries
-# Busio is the SMBus equivalent bus
-# for our configuration
+####################################################################################
+# The use of ADC (MCP3008) support libraries is credited to: 
+# https://github.com /adafruit/Adafruit_CircuitPython_MCP3xxx/blob/master/README.rst
+####################################################################################
+
 import busio
 import digitalio
 import board
